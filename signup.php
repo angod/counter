@@ -63,7 +63,7 @@
         // if age is OK-> signup
         if ($age) {
           $passwd_hash = password_hash($passwd, PASSWORD_ARGON2ID);
-          $status = true;
+          $status = 1;
 
           $sql = "INSERT INTO users(username, password, birth_date, status)
             VALUES(:username, :password, :birth_date, :status)";

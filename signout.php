@@ -10,7 +10,7 @@ if (!isset($_POST["signout"])) {
 if (isset($_POST["signout"])) {
   // set status=0(offline) and delete cookie
   $userID = $_COOKIE["userID"];
-  $status = false;
+  $status = 0;
   $sql = "UPDATE users SET status = :status WHERE user_id = :userID";
   $stmt = $pdo->prepare($sql);
   $stmt->execute([

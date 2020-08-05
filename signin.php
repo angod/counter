@@ -60,7 +60,7 @@
           setcookie("userID", $userID, time() + 86400);
 
           // update status=1(online)
-          $status = true;
+          $status = 1;
           $sql = "UPDATE users SET status = :status WHERE user_id = :userID";
           $stmt = $pdo->prepare($sql);
           $stmt->execute([
